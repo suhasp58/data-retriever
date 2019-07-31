@@ -24,7 +24,7 @@ public class clientcontroller {
 	  JSONObject obj = new JSONObject(data);
 		String server = obj.getString("server");
 		int port = obj.getInt("port");
-		Jedis jedis = new Jedis("localhost", 8080);
+		Jedis jedis = new Jedis("localhost",6379);
          try {
          String serverstring =jedis.get(server);
          JSONObject object = new JSONObject(serverstring);
